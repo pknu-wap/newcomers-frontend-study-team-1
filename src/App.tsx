@@ -8,6 +8,8 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/loading-screen";
+import { styled } from "styled-components";
+import { auth } from "./firebase.ts";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,11 @@ font-family: system-ui;
 }
 `;
 
+const Wrapper=styled.div`
+height: 100vh;
+display: flex;
+justify-content: center;
+`;
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -56,10 +63,10 @@ function App() {
   }
   useEffect(() => { init() }, [])
   return (
-    <>
+    <Wrapper>
       <GlobalStyles />
       {isLoading ? <LoadingScreen />: <RouterProvider router={router} />}
-    </>
+    </Wrapper>
   );
 }
 

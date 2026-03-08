@@ -10,11 +10,12 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "./components/loading-screen";
 import { styled } from "styled-components";
 import { auth } from "./firebase.ts";
+import ProtectedRoute from "./components/protected-route.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (<ProtectedRoute><Layout /></ProtectedRoute>),
     children: [
       {
         path: "",
@@ -22,10 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <Profile />
-      }
-    ]
-  },
+        element: <Profile />}]},
   {
     path: "/login",
     element: <Login />

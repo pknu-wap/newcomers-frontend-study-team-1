@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { db } from "../firebase";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import Tweet from "./tweet";
 
 export interface ITweet {
     id:string;

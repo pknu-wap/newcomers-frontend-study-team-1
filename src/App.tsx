@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "./components/layout";
 import Home from "./routes/home";
-import Profile from "./routes/profile";
+import Profile from "./routes/Profile";
 import Login from "./routes/login";
 import CreateAccount from "./routes/create-account.tsx";
 import { createGlobalStyle } from "styled-components";

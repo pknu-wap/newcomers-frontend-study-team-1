@@ -1,4 +1,4 @@
-import { ITweet } from "./timeline";
+import type { ITweet } from "./timeline";
 import { styled } from "styled-components"
 import { auth } from "../firebase";
 import { deleteDoc, doc } from "firebase/firestore";

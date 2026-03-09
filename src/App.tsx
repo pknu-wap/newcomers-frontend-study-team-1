@@ -35,6 +35,9 @@ const router = createBrowserRouter([
 ]);
 
 const GlobalStyles = createGlobalStyle`
+::-webkit-scrollbar {
+display:none;
+}
 ${reset};
 {
 box-sizing: border-box;
